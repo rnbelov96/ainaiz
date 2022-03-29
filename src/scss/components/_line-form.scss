@@ -1,0 +1,144 @@
+.line-form {
+  background: rgba(244, 242, 242, 0.9);
+  border-radius: 10px;
+  position: relative;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 40px;
+  padding-bottom: 26px;
+
+  @media (max-width: 1150px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 790px) {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 650px) {
+    padding: 30px;
+  }
+
+  &_desc {
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+}
+
+.line-form__bg {
+  position: absolute;
+  width: 98%;
+  height: 4px;
+  background: #ff7104;
+  @include x-align;
+  bottom: -4px;
+}
+
+.line-form__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.11;
+  text-align: center;
+  margin-bottom: 33px;
+
+  @media (max-width: 650px) {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+}
+
+.line-form__content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 16px;
+  position: relative;
+
+  @media (max-width: 1070px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.line-form__input-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  gap: 44px;
+
+  @media (max-width: 790px) {
+    flex-direction: column;
+  }
+}
+
+.line-form__input-box {
+  width: 100%;
+  max-width: 211px;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    @include bg;
+    background-size: contain;
+    left: 0px;
+    top: 2px;
+    position: absolute;
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      background-image: url('/src/img/icons/form/#{$i}.png');
+    }
+  }
+}
+
+.line-form__input {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding-bottom: 6px;
+  padding-left: 25px;
+  border-bottom: 1px solid #a0a0a0;
+  width: 100%;
+
+  &::-webkit-input-placeholder {
+    color: #adacac;
+    font-style: italic;
+  }
+
+  &::-moz-placeholder {
+    color: #adacac;
+    font-style: italic;
+  }
+
+  &:-ms-input-placeholder {
+    color: #adacac;
+    font-style: italic;
+  }
+
+  &:-moz-placeholder {
+    color: #adacac;
+    font-style: italic;
+  }
+}
+
+.line-form__policy {
+  text-align: center;
+  margin-bottom: 0;
+  color: #909090;
+  font-size: 11px;
+
+  @media (max-width: 650px) {
+    font-size: 11px !important;
+  }
+
+  span {
+    cursor: pointer;
+  }
+}

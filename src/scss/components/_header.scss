@@ -1,0 +1,87 @@
+.header {
+  padding-top: 30px;
+
+  @media (max-width: 650px) {
+    padding-top: 8px;
+  }
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.header__text {
+  max-width: 581px;
+  line-height: 1.33;
+  font-size: 18px;
+  margin-bottom: 0;
+  text-align: center;
+
+  @media (max-width: 1090px) {
+    display: none;
+  }
+}
+
+.header__logo {
+  @media (max-width: 650px) {
+    width: 100px;
+    height: auto;
+  }
+}
+
+.header__contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.header__phone {
+  @include reset-link(black);
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  position: relative;
+
+  &:hover::before {
+    transform: rotate(20deg);
+  }
+
+  &::before {
+    width: 24px;
+    height: 24px;
+    content: '';
+    @include bg;
+    background-image: url('/src/img/icons/phone.png');
+    position: absolute;
+    left: -32px;
+    top: -0px;
+    transition: transform 0.5s;
+
+    @media (max-width: 650px) {
+      width: 16px;
+      height: 16px;
+      left: -23px;
+      top: 2px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+}
+
+.header__callback {
+  @include reset-btn;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
+}

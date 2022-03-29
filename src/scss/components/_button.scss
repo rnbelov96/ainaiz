@@ -1,23 +1,46 @@
 .button {
   @include reset-btn;
-  font-size: 25px;
-  line-height: 32px;
-  text-align: center;
+  font-size: 16px;
+  line-height: 18px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  text-align: left;
   align-items: center;
-  padding-left: 7px;
+  padding-left: 86px;
   padding-right: 7px;
-  text-transform: uppercase;
   color: white;
   font-weight: 700;
-  background: linear-gradient(180deg, #ffa665 0%, #fc4f19 100%);
-  box-shadow: 0px 6px 0px #cb3300;
-  border-radius: 8px;
+  background: linear-gradient(180.85deg, #ff0000 0.74%, #9b2d30 129.07%);
+  border-radius: 3.6549px;
+  box-shadow: 0px 6px 0px #89282b;
   width: 100%;
-  min-height: 92px;
+  max-width: 233px;
+  min-height: 74px;
   overflow: hidden;
   position: relative;
+
+  &_pdf {
+    &::before {
+      content: '';
+      width: 43px;
+      height: 43px;
+      @include bg;
+      background-image: url('/src/img/icons/form/pdf.png');
+      position: absolute;
+      left: 23px;
+      @include y-align;
+    }
+  }
+
+  &_present {
+    display: none;
+
+    @media (max-width: 650px) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 
   @media (max-width: 650px) {
     font-size: 16px;
