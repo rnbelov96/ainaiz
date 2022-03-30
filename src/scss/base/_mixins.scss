@@ -77,6 +77,28 @@
   }
 }
 
+@mixin title {
+  font-size: 35px;
+  line-height: 1.14;
+
+  @media (max-width: 1150px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+
+  b {
+    color: $orange;
+    text-transform: uppercase;
+  }
+}
+
 @mixin h1 {
   font-weight: 900;
   font-family: 'Noto Sans';

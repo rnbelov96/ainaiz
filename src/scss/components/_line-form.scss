@@ -27,6 +27,21 @@
       display: none;
     }
   }
+
+  &_numbers {
+    position: relative;
+    top: 47px;
+
+    @media (max-width: 650px) {
+      top: 0;
+    }
+
+    .line-form__title {
+      max-width: 654px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .line-form__bg {

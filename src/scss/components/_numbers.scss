@@ -1,0 +1,155 @@
+.numbers {
+  min-height: 1054px;
+  padding-top: 74px;
+  @include bg;
+  background-image: url('/src/img/bgs/numbers-bg.jpg');
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.numbers__title {
+  @include title;
+  max-width: 675px;
+  margin-bottom: 27px;
+
+  @include mobile-mb;
+}
+
+.numbers__history {
+  max-width: 844px;
+  font-weight: bold;
+  margin-bottom: 17px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.numbers__result-title {
+  max-width: 354px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 20px;
+  line-height: 1.4;
+
+  @include mobile-mb;
+}
+
+.numbers__text-box {
+  margin-bottom: 28px;
+
+  & > * + * {
+    margin-top: 12px;
+  }
+
+  @include mobile-mb;
+}
+
+.numbers__text {
+  max-width: 502px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.numbers__list-title {
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  margin-bottom: 25px;
+  font-weight: 600;
+
+  @include mobile-mb;
+}
+
+.numbers__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 600px;
+  margin-bottom: 64px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 40px;
+  }
+}
+
+.numbers__item {
+  min-width: 177px;
+}
+
+.numbers__item-title {
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.numbers__item-text {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.numbers__note-wrapper {
+  position: relative;
+}
+
+.numbers__note {
+  max-width: calc(40px + 40px + 680px);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 1.25;
+
+  @media (max-width: 650px) {
+    padding: 20px;
+  }
+
+  &::before {
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: -30px;
+    @include x-align;
+    @include bg;
+    background-image: url('/src/img/icons/circle.svg');
+    z-index: 2;
+    content: '';
+  }
+}
+
+.numbers__note-img {
+  position: absolute;
+  left: 450px;
+  top: -613px;
+
+  @media (max-width: 1400px) {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: -15%;
+    margin-bottom: -15%;
+  }
+
+  @media (max-width: 650px) {
+    width: 200%;
+    @include x-align;
+    margin-top: -23%;
+    margin-bottom: -9%;
+  }
+}
