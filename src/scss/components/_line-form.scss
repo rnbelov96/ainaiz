@@ -31,6 +31,7 @@
   &_numbers {
     position: relative;
     top: 47px;
+    background: rgba(255, 255, 255, 0.9);
 
     @media (max-width: 650px) {
       top: 0;
@@ -41,6 +42,10 @@
       margin-left: auto;
       margin-right: auto;
     }
+  }
+
+  &_plan {
+    background: rgba(255, 255, 255, 0.8);
   }
 }
 
