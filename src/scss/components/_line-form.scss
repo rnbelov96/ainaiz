@@ -47,6 +47,24 @@
   &_plan {
     background: rgba(255, 255, 255, 0.8);
   }
+
+  &_factor {
+    background: #ffffff;
+    position: relative;
+    top: 85px;
+    padding-top: 30px;
+
+    @media (max-width: 790px) {
+      top: 0px;
+      margin-top: 20px;
+    }
+
+    .line-form__title {
+      max-width: 602px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .line-form__bg {
