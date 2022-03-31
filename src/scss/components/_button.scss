@@ -18,6 +18,7 @@
   min-height: 74px;
   overflow: hidden;
   position: relative;
+  transition: background 0.5s, top 0.5s;
 
   &_pdf {
     &::before {
@@ -45,6 +46,19 @@
     }
   }
 
+  &_tool {
+    &::before {
+      content: '';
+      width: 43px;
+      height: 43px;
+      @include bg;
+      background-image: url('/src/img/icons/form/tool.png');
+      position: absolute;
+      left: 23px;
+      @include y-align;
+    }
+  }
+
   &_present {
     display: none;
 
@@ -60,11 +74,11 @@
   }
 
   &:hover {
-    background: #fc4f19;
+    background: linear-gradient(180.85deg, #FDB2B2 0.74%, #E43C41 129.07%);
   }
 
   &:active {
-    background: #cb3300;
+    background: #B82226;
     box-shadow: none;
     top: 6px;
   }

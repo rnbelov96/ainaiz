@@ -4,6 +4,32 @@
   @media (max-width: 650px) {
     padding-top: 8px;
   }
+
+  &_thanks {
+    padding-top: 20px !important;
+    padding-bottom: 20px;
+    background-color: white;
+  }
+}
+
+.header__call-text {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+
+  &_arrowed {
+    position: relative;
+    &::before {
+      content: url('/src/img/icons/arrow-up.svg');
+      left: -15px;
+      top: 1px;
+      position: absolute;
+    }
+  }
+
+  @media (max-width: 650px) {
+    font-size: 14px !important;
+  }
 }
 
 .header__content {

@@ -5,6 +5,8 @@
 @import './base/global.scss';
 @import './components/modal.scss';
 @import './components/priv-policy.scss';
+@import './components/header.scss';
+@import './components/footer.scss';
 
 .thanks__html,
 .thanks__body {
@@ -12,7 +14,7 @@
 }
 
 .thanks__body {
-  // background-image: url('/src/img/bgs/some-image.jpg');
+  background-image: url('/src/img/bgs/thanks-bg.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
@@ -44,4 +46,161 @@
 
 .thanks {
   flex: 1 0 auto;
+  overflow: hidden;
+  padding-top: 87px;
+  padding-bottom: 115px;
+
+  @media (max-width: 1150px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.thanks__content {
+  position: relative;
+  max-width: 855px;
+
+  @media (max-width: 1150px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.thanks__title {
+  @include title;
+  line-height: 1.29;
+  font-weight: 600;
+  margin-bottom: 15px;
+  max-width: 687px;
+  color: white;
+
+  span {
+    color: $orange;
+    font-weight: bold;
+  }
+}
+
+.thanks__subtitle {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 40px;
+
+  b {
+    font-weight: bold;
+  }
+
+  @include mobile-mb;
+}
+
+.thanks__time-box {
+  max-width: 806px;
+  margin-bottom: 15px;
+}
+
+.thanks__time-top {
+  width: 100%;
+  background: #ff7104;
+  border-radius: 20px 20px 0px 0px;
+  text-align: center;
+  padding: 17px;
+  color: white;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    text-align: left;
+    padding-left: 50px;
+  }
+
+  span {
+    position: relative;
+    padding-left: 42px;
+
+    @media (max-width: 650px) {
+      padding-left: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 32px;
+      height: 32px;
+      @include bg;
+      background-image: url('/src/img/icons/calendar.png');
+      position: absolute;
+      left: 0px;
+      @include y-align;
+
+      @media (max-width: 650px) {
+        left: -40px;
+      }
+    }
+  }
+
+  b {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.thanks__time-bottom {
+  background: #ffffff;
+  border: 1px solid #ff7104;
+  border-radius: 0 0 20px 20px;
+  padding: 17px;
+  text-align: center;
+  margin-bottom: 0;
+
+  b {
+    font-weight: bold;
+  }
+}
+
+.thanks__text {
+  max-width: 725px;
+  color: white;
+  line-height: 1.5;
+  margin-bottom: 40px;
+
+  @include mobile-mb;
+}
+
+.thanks__slogan {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 40px;
+  font-weight: bold;
+
+  @include mobile-mb;
+}
+
+.thanks__back-link {
+  @include reset-link($orange);
+  color: $orange;
+  text-decoration: underline;
+  line-height: 1.5;
+}
+
+.thanks__owner-img {
+  position: absolute;
+  right: -330px;
+  @include y-align;
+  z-index: -1;
+  pointer-events: none;
+
+  @media (max-width: 1150px) {
+    position: relative;
+    display: block;
+    @include max-width(335px);
+    top: 0;
+    right: 0;
+    transform: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: auto;
+  }
 }
