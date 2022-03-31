@@ -1,0 +1,129 @@
+.support {
+  background: #f3f2f2;
+  padding-top: 30px;
+  padding-bottom: 80px;
+
+  @media (max-width: 991px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-bottom: 30px;
+  }
+}
+
+.support__title {
+  @include title;
+  text-align: center;
+  margin-bottom: 50px;
+  @include tablet-mb;
+  @include mobile-mb;
+}
+
+.support__list {
+  @include reset-list;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+
+  @media (max-width: 1150px) {
+    max-width: 848px;
+  }
+
+  &_top {
+    position: relative;
+    margin-bottom: 40px;
+
+    &::after {
+      content: url('/src/img/support-img.png');
+      position: absolute;
+      z-index: -1;
+      top: -226px;
+      right: -391px;
+      pointer-events: none;
+
+      @media (max-width: 650px) {
+        content: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_bottom {
+    margin-bottom: 60px;
+
+    @include tablet-mb;
+    @include mobile-mb;
+  }
+}
+
+.support__bottom-list-wrapper {
+  display: none;
+}
+
+.support__item {
+  max-width: 271px;
+}
+
+.support__item-img {
+  display: block;
+  margin-bottom: 20px;
+
+  @media (max-width: 650px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.support__item-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #12162a;
+
+  @media (max-width: 650px) {
+    text-align: center;
+  }
+}
+
+.support__item-text {
+  margin-bottom: 0;
+  line-height: 1.5;
+
+  @media (max-width: 650px) {
+    text-align: center;
+  }
+}
+
+.support__more-btn {
+  margin-bottom: 50px;
+  @include reset-btn;
+  font-size: 26px;
+  line-height: 1.5;
+  position: relative;
+  color: $orange;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+
+  &::after {
+    content: url('/src/img/icons/arrow-down.svg');
+    position: absolute;
+    @include y-align;
+    right: -33px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: -19px;
+  }
+}

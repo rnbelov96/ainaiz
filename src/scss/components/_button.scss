@@ -32,6 +32,19 @@
     }
   }
 
+  &_info {
+    &::before {
+      content: '';
+      width: 43px;
+      height: 43px;
+      @include bg;
+      background-image: url('/src/img/icons/form/info.png');
+      position: absolute;
+      left: 23px;
+      @include y-align;
+    }
+  }
+
   &_present {
     display: none;
 
