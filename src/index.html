@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Франшиза «»</title>
+    <title>Франшиза «Айнайз»</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -82,7 +82,7 @@
               Доступные инвестиции для старта своего бизнеса: от 250 до 600 т.р.
             </li>
           </ul>
-          <button class="button button_pdf button_present">
+          <button class="button button_pdf button_present js-present">
             Получить презентацию
           </button>
           <form class="line-form line-form_desc">
@@ -145,7 +145,7 @@
             <span>200 до 250 продаж в месяц</span>
           </h2>
           <p class="direct__text">
-            В прейскуранте вашей ремонтно-прокантной мастерской «Айнаиз» будут
+            В прейскуранте вашей ремонтно-прокатной мастерской «Айнаиз» будут
             сразу 3 типа услуг:
           </p>
           <ul class="direct__list">
@@ -218,14 +218,10 @@
           </p>
           <div class="numbers__text-box">
             <p class="numbers__text">
-              Качественное и быстрое обслуживание — залог доверия уже
-              <b>более XXXX клиентов</b>
-            </p>
-            <p class="numbers__text">
               Предлагаем покупателям широкий ассортимент от ведущих мировых
               брендов, включая
               <b>
-                Ingco, «Зубр», «Интерскол», Hilti, Makita, BLACK & DECKER, Bosch
+                «Зубр», «Интерскол», Hilti, Makita, BLACK & DECKER, Bosch
               </b>
               и другие.
             </p>
@@ -638,6 +634,16 @@
                 <div class="swiper-slide">
                   <div class="arg__slide-card">
                     <p class="arg__slide-text arg__slide-text_1">
+                      При ремонте электроинструментов основные детали —
+                      <span>это якорь или ротор.</span> Мы научились
+                      восстанавливать и балансировать якоря, поэтому предлагаем
+                      нашим партнёрам <span>восстановленные взамен новых;</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="arg__slide-card">
+                    <p class="arg__slide-text arg__slide-text_2">
                       Небольшие стартовые инвестиции от 200 до 600 т.р.
                       <span>
                         снижают порог входа и минимизируют срок окупаемости.
@@ -647,7 +653,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="arg__slide-card">
-                    <p class="arg__slide-text arg__slide-text_2">
+                    <p class="arg__slide-text arg__slide-text_3">
                       По нашей бизнес-модели для обслуживания покупателей
                       <span>достаточно нанять 2-х сотрудников;</span>
                     </p>
@@ -655,7 +661,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="arg__slide-card">
-                    <p class="arg__slide-text arg__slide-text_3">
+                    <p class="arg__slide-text arg__slide-text_4">
                       Запуск мастерской будет проходить от 25 до 30 дней, то
                       есть
                       <span>
@@ -666,20 +672,12 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="arg__slide-card">
-                    <p class="arg__slide-text arg__slide-text_1">
-                      Небольшие стартовые инвестиции от 200 до 600 т.р.
+                    <p class="arg__slide-text arg__slide-text_5">
+                      Специальные предложения: возможность получить эксклюзив на
+                      город или
                       <span>
-                        снижают порог входа и минимизируют срок окупаемости.
-                      </span>
-                    </p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="arg__slide-card">
-                    <p class="arg__slide-text arg__slide-text_1">
-                      Небольшие стартовые инвестиции от 200 до 600 т.р.
-                      <span>
-                        снижают порог входа и минимизируют срок окупаемости.
+                        скидку до 20% при покупке второй и последующей франшизы
+                        «Айнаиз»;
                       </span>
                     </p>
                   </div>
@@ -783,10 +781,8 @@
                   команды
                 </p>
                 <p class="support__item-text">
-                  Вы пройдёте спецкурс и разберётесь во всех нюансах управления
-                  точкой и общения с клиентами, а ещё наши специалисты
-                  подготовят ваших сотрудников по всем направлениям бизнеса и
-                  проведут аттестацию;
+                  Наши специалисты подготовят ваших сотрудников и научат
+                  диагностировать неисправное оборудование в том числе;
                 </p>
               </li>
               <li class="support__item">
@@ -1029,13 +1025,53 @@
 
     <div class="modal">
       <div class="modal__center-wrapper">
-        <form class="modal-form">
+        <form class="modal-form modal-form_support">
+          <div class="modal-form__bg"></div>
           <h3 class="modal-form__title">
-            Оставьте заявку <span class="js-modal-form-title"></span>
+            <span class="js-modal-form-title"></span>
           </h3>
-          <button class="button button_modal-form js-modal-form-btn">
-            Получить документацию
-          </button>
+          <div class="modal-form__content">
+            <div class="modal-form__input-container">
+              <div class="modal-form__input-box">
+                <input
+                  type="tel"
+                  placeholder="+7 (___) ___ ____"
+                  name="phone"
+                  data-type="phone"
+                  autocomplete="off"
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <input
+                  type="email"
+                  placeholder="bestpartner@ainaiz.ru"
+                  name="email"
+                  data-type="email"
+                  autocomplete="off"
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <input
+                  type="text"
+                  placeholder="Айдар Ахметшин"
+                  name="name"
+                  data-type="name"
+                  autocomplete="off"
+                  class="modal-form__input"
+                />
+              </div>
+            </div>
+            <button class="button button_modal-form js-modal-form-btn">
+              Получить информацию
+            </button>
+          </div>
+          <p class="modal-form__policy">
+            Я подтверждаю, что ознакомлен и даю согласие на обработку
+            персональных данных на условиях и для целей, определяемых
+            <span class="js-policy">Политикой конфиденциальности</span>
+          </p>
           <button
             data-modal-close=""
             class="modal__close"

@@ -69,16 +69,23 @@
     }
   }
 
+  &_modal-form {
+    text-align: center;
+    padding-left: 7px;
+    justify-content: center;
+    max-width: 100%;
+  }
+
   @media (max-width: 650px) {
     font-size: 16px;
   }
 
   &:hover {
-    background: linear-gradient(180.85deg, #FDB2B2 0.74%, #E43C41 129.07%);
+    background: linear-gradient(180.85deg, #fdb2b2 0.74%, #e43c41 129.07%);
   }
 
   &:active {
-    background: #B82226;
+    background: #b82226;
     box-shadow: none;
     top: 6px;
   }

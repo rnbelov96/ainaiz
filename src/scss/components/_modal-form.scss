@@ -1,0 +1,123 @@
+.modal-form {
+  background: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 34px;
+  width: 98%;
+  padding-bottom: 35px;
+  max-width: 500px;
+
+  @media (max-width: 650px) {
+    padding: 25px;
+  }
+}
+
+.modal-form__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.11;
+  text-align: center;
+  margin-bottom: 33px;
+
+  @media (max-width: 650px) {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+}
+
+.modal-form__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 25px;
+  position: relative;
+  width: 100%;
+
+  @media (max-width: 650px) {
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.modal-form__input-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  gap: 44px;
+  flex-direction: column;
+  width: 100%;
+
+  @media (max-width: 650px) {
+    gap: 40px;
+  }
+}
+
+.modal-form__input-box {
+  width: 100%;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    @include bg;
+    background-size: contain;
+    left: 0px;
+    top: 2px;
+    position: absolute;
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      background-image: url('/src/img/icons/form/#{$i}.png');
+    }
+  }
+}
+
+.modal-form__input {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding-bottom: 6px;
+  padding-left: 25px;
+  border-bottom: 1px solid #a0a0a0;
+  width: 100%;
+
+  &::-webkit-input-placeholder {
+    color: #adacac;
+    font-style: italic;
+  }
+
+  &::-moz-placeholder {
+    color: #adacac;
+    font-style: italic;
+  }
+
+  &:-ms-input-placeholder {
+    color: #adacac;
+    font-style: italic;
+  }
+
+  &:-moz-placeholder {
+    color: #adacac;
+    font-style: italic;
+  }
+}
+
+.modal-form__policy {
+  text-align: center;
+  margin-bottom: 0;
+  color: #909090;
+  font-size: 12px;
+
+  @media (max-width: 650px) {
+    font-size: 12px !important;
+  }
+
+  span {
+    cursor: pointer;
+  }
+}
