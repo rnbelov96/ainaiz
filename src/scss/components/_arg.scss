@@ -4,6 +4,10 @@
   padding-top: 200px;
   padding-bottom: 110px;
 
+  @media (min-width: 2700px) {
+    background-size: contain;
+  }
+
   @media (max-width: 1070px) {
     background: #f3f2f2;
     padding-top: 150px;

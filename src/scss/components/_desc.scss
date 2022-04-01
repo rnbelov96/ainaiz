@@ -4,6 +4,10 @@
   background-image: url('/src/img/bgs/desc-bg.jpg');
   padding-bottom: 79px;
 
+  @media (min-width: 2700px) {
+    background-size: contain;
+  }
+
   @media (max-width: 650px) {
     padding-bottom: 30px;
     min-height: auto;
